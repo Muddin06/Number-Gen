@@ -1,0 +1,40 @@
+def quiz():
+    questions = [
+        {
+            "question": "Who has the most goals in the Premier League?",
+            "options": ["A) Mo Salah", "B) Thierry henry", "C) Alan Shearer", "D) Wayne Rooney"],
+            "answer": "C"
+        },
+        {
+            "question": "Which player has the most assists in the premier league?",
+            "options": ["A) Ryan Giggs", "B) Steven Gerrard", "C) Kevin De Bruyne", "D) Frank Lampard"],
+            "answer": "A"
+        },
+        {
+            "question": "Which Goalkeeper has the most clean sheets in the Premier League?",
+            "options": ["A) David De Gea", "B) Petr Cech", "C) David James", "D) David Seamen"],
+            "answer": "B"
+        }
+    ]  # <-- Closing bracket for the list
+
+    score = 0
+
+    print("\nWelcome to the Quiz Game!\n")
+
+    for q in questions:
+        print(q["question"])
+        for option in q["options"]:
+            print(option)
+        
+        user_answer = input("\nEnter your answer (A, B, C, or D): ").upper()
+
+        if user_answer == q["answer"]:
+            print(" Correct!\n")
+            score += 1
+        else:
+            print(f" Wrong! The correct answer was {q['answer']}.\n")
+
+    print(f"Game Over! You scored {score} out of {len(questions)}.")
+
+if __name__ == "__main__":
+    quiz() 
